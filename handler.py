@@ -6,7 +6,10 @@ from rossmann.Rossmann import Rossmann
 
 #load model
 
-model = pickle.load(open('/model/model_rossman.pkl', 'rb'))
+BASE_DIR = os.path.abspath('')
+MODEL_DIR = os.path.join(BASE_DIR,'model')
+
+model = pickle.load(open(os.path.join(MODEL_DIR,'model_rossman.pkl'), 'rb'))
 
 app = Flask(__name__)
 
